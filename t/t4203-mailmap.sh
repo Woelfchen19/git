@@ -932,7 +932,7 @@ test_expect_success 'find top-level mailmap from subdir' '
 	test_cmp expect actual
 '
 
-test_expect_success SYMLINKS 'set up symlink tests' '
+test_expect_success 'set up symlink/--use-mailmap tests' '
 	git commit --allow-empty -m foo --author="Orig <orig@example.com>" &&
 	echo "New <new@example.com> <orig@example.com>" >map &&
 	rm -f .mailmap
